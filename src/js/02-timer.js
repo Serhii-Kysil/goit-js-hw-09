@@ -44,6 +44,10 @@ const datePicker = flatpickr(
   options
 );
 
+if (datePicker.selectedDates[0] < new Date()) {
+  startBtnEl.disabled = true;
+}
+
 startBtnEl.addEventListener('click', () => {
   const selectedDate = datePicker.selectedDates[0];
   let timeRemaining = selectedDate - new Date();
