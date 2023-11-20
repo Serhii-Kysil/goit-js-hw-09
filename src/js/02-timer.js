@@ -68,7 +68,7 @@ startBtnEl.addEventListener('click', () => {
       time.seconds
     );
 
-    if (timeRemaining <= 0) {
+    if (time.seconds <= 0) {
       clearInterval(timerInterval);
     } else {
       timeRemaining -= 1000;
