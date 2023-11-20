@@ -9,6 +9,12 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+function defaultBtnStatus() {
+  startButton.disabled = false;
+  stopButton.disabled = true;
+}
+defaultBtnStatus();
+
 startButton.addEventListener('click', function () {
   this.disabled = true;
   stopButton.disabled = false;
